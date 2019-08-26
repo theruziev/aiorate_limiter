@@ -4,9 +4,9 @@
         :target: https://codecov.io/gh/theruziev/rate_limiter
 
 
-Rate limiter
+Rate Limiter
 ============
 
-A dead simple python implementation of a general purpose rate limiter based on
+A simple asyncio ready python implementation of a general purpose rate limiter based on
 `Token Bucket algorithm <https://en.wikipedia.org/wiki/Token_bucket>`_.
 
