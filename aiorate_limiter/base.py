@@ -61,7 +61,3 @@ class RateLimiterAbstract(ABC):
     @abstractmethod
     async def consume(self, key: str, points: int = 1) -> RateLimiterResult:
         pass
-
-    @abstractmethod
-    async def factory(self, opts: RateLimiterOpts):
-        pass
