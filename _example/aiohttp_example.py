@@ -1,11 +1,9 @@
 from aiohttp import web
-from aiohttp.web_exceptions import HTTPTooManyRequests
 
 from aiorate_limiter.base import RateLimiterOpts
 from aiorate_limiter.storage.memory import MemoryRateLimiter
 
-opts = RateLimiterOpts(points=5, duration=5000)
-limiter = MemoryRateLimiter(opts)
+limiter = MemoryRateLimiter(RateLimiterOpts(points=2, duration=5000))
 
 
 async def hello(request):
@@ -17,8 +15,15 @@ async def limiter_middleware(request, handler):
     res = await limiter.consume(request.remote)
     if res.is_allowed:
         request["points"] = res.remaining_points
-        return await handler(request)
-    raise HTTPTooManyRequests()
+        response = await handler(request)
+    else:
+        response = web.Response(text="To many requests", status=429)
+
+    response.headers["X-Rate-Limit-Limit"] = str(res.consumed_points)
+    response.headers["X-Rate-Limit-Remaining"] = str(res.remaining_points)
+    response.headers["X-Rate-Limit-Reset"] = str(res.ms_before_next)
+
+    return response
 
 
 if __name__ == "__main__":

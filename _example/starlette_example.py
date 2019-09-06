@@ -10,7 +10,7 @@ from aiorate_limiter.storage.memory import MemoryRateLimiter
 
 app = Starlette(debug=True)
 
-mem_rt = MemoryRateLimiter(RateLimiterOpts(points=2, duration=5000))
+limiter = MemoryRateLimiter(RateLimiterOpts(points=2, duration=5000))
 
 
 class RateLimiterMiddleware:
@@ -24,7 +24,7 @@ class RateLimiterMiddleware:
 
         request = Request(scope, receive)
 
-        res = await mem_rt.consume(request.client.host)
+        res = await limiter.consume(request.client.host)
 
         async def send_wrapper(msg: Message):
             if msg["type"] == "http.response.start":
