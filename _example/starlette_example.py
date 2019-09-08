@@ -1,5 +1,3 @@
-from functools import partial
-
 from starlette.applications import Starlette
 from starlette.datastructures import MutableHeaders
 from starlette.requests import Request
@@ -7,7 +5,6 @@ from starlette.responses import JSONResponse
 import uvicorn
 from starlette.types import ASGIApp, Scope, Receive, Send, Message
 
-from aiorate_limiter import RateLimiterResult
 from aiorate_limiter.base import RateLimiterOpts
 from aiorate_limiter.storage.memory import MemoryRateLimiter
 
