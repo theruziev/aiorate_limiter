@@ -17,18 +17,6 @@ Supported storage
 * Redis (`aioredis <https://github.com/aio-libs/aioredis>`_)
 
 
-⚙️ Installation
----------------
-
-Install with the following command:
-
-.. code-block:: bash
-
-    pip install aiorate_limiter
-    # With a redis storage
-    pip install aiorate_limiter[aioredis]
-
-
 ⚡ Quickstart
 -------------
 
