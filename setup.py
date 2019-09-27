@@ -45,7 +45,7 @@ setup(
             'pytest-asyncio==0.10.0',
             'black==19.3b0',
             'asynctest==0.13.0',
-            'mypy==0.720',
+            'mypy==0.730',
         ]
     }
 )
