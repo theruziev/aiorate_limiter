@@ -41,7 +41,7 @@ setup(
             'pep8-naming==0.8.2',
             'flake8==3.7.8',
             'coverage==4.5.4',
-            'pytest==5.2.1',
+            'pytest==5.2.2',
             'pytest-asyncio==0.10.0',
             'black==19.3b0',
             'asynctest==0.13.0',
