@@ -38,7 +38,7 @@ setup(
         'dev': [
             'faker==4.1.0',
             'flake8-bandit==2.1.2',
-            'pep8-naming==0.9.1',
+            'pep8-naming==0.10.0',
             'flake8==3.8.2',
             'coverage==5.0.3',
             'pytest==5.4.2',
