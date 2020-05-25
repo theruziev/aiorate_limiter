@@ -39,7 +39,7 @@ setup(
             'faker==4.0.2',
             'flake8-bandit==2.1.2',
             'pep8-naming==0.9.1',
-            'flake8==3.7.9',
+            'flake8==3.8.2',
             'coverage==5.0.3',
             'pytest==5.4.1',
             'pytest-asyncio==0.10.0',
