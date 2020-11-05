@@ -42,7 +42,7 @@ setup(
             'flake8==3.8.3',
             'coverage==5.3',
             'pytest==5.4.2',
-            'pytest-asyncio==0.10.0',
+            'pytest-asyncio==0.14.0',
             'black==20.8b1',
             'asynctest==0.13.0',
             'mypy==0.730',
