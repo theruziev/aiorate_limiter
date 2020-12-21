@@ -40,7 +40,7 @@ setup(
             'flake8-bandit==2.1.2',
             'pep8-naming==0.11.1',
             'flake8==3.8.4',
-            'coverage==5.3',
+            'coverage==5.3.1',
             'pytest==6.2.0',
             'pytest-asyncio==0.14.0',
             'black==20.8b1',
