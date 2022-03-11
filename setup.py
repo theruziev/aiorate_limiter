@@ -37,7 +37,7 @@ setup(
         'aioredis:python_version>="3.7"': ['aioredis>=1.0.0'],
         'dev': [
             'faker==11.1.0',
-            'flake8-bandit==2.1.2',
+            'flake8-bandit==3.0.0',
             'pep8-naming==0.11.1',
             'flake8==4.0.1',
             'coverage==5.3',
