@@ -36,16 +36,16 @@ setup(
         'aioredis:python_version<"3.7"': ['aioredis>=0.3.3'],
         'aioredis:python_version>="3.7"': ['aioredis>=1.0.0'],
         'dev': [
-            'faker==11.1.0',
+            'faker==17.0.0',
             'flake8-bandit==2.1.2',
             'pep8-naming==0.11.1',
             'flake8==4.0.1',
             'coverage==5.3',
             'pytest==7.2.1',
             'pytest-asyncio==0.16.0',
-            'black==21.12b0',
+            'black==23.1.0',
             'asynctest==0.13.0',
-            'mypy==0.930',
+            'mypy==1.0.0',
         ]
     }
 )
