@@ -43,7 +43,7 @@ setup(
             'coverage==7.2.1',
             'pytest==7.2.2',
             'pytest-asyncio==0.20.3',
-            'black==23.1.0',
+            'black==23.3.0',
             'asynctest==0.13.0',
             'mypy==1.1.1',
         ]
